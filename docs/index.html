@@ -2,14 +2,158 @@
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
-    <title>คลังรวมงานวิชา Game Dev!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>คลังรวมงานวิชา Game Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      :root {
+        --bg:      #f7f5f2;
+        --text:    #2a2825;
+        --muted:   #9b9590;
+        --border:  #e4e0da;
+        --accent:  #5c7a6e;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Sarabun', sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        min-height: 100vh;
+        padding: 4rem 1.5rem 6rem;
+      }
+
+      .wrap {
+        max-width: 560px;
+        margin: 0 auto;
+      }
+
+      /* ── Header ── */
+      header {
+        margin-bottom: 3rem;
+      }
+
+      .label {
+        font-size: .75rem;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 400;
+        margin-bottom: .6rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.25;
+      }
+
+      /* ── List ── */
+      .entries {
+        border-top: 1px solid var(--border);
+      }
+
+      .entry {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+        text-decoration: none;
+        color: var(--text);
+        transition: color .15s;
+      }
+
+      .entry:hover {
+        color: var(--accent);
+      }
+
+      .entry-left {
+        display: flex;
+        align-items: baseline;
+        gap: .9rem;
+      }
+
+      .entry-num {
+        font-size: .72rem;
+        color: var(--muted);
+        font-weight: 400;
+        letter-spacing: .06em;
+        min-width: 3rem;
+      }
+
+      .entry-title {
+        font-size: .98rem;
+        font-weight: 500;
+      }
+
+      .entry-arrow {
+        font-size: .85rem;
+        color: var(--muted);
+        transition: color .15s, transform .15s;
+        flex-shrink: 0;
+      }
+
+      .entry:hover .entry-arrow {
+        color: var(--accent);
+        transform: translateX(3px);
+      }
+
+      /* ── Footer ── */
+      footer {
+        margin-top: 3rem;
+        font-size: .78rem;
+        color: var(--muted);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .entry, .entry-arrow { transition: none; }
+      }
+    </style>
   </head>
   <body>
-    <h1>งานวิชา Computer Game Development</h1>
-    <ul>
-      <li><a href="lab01/lab01.html">ใบงานที่ 1: แนะนำตัวเอง (2D Scene)</a></li>
-      <li><a href="lab02/game21/game21.html">ใบงานที่ 2: game 21</a></li>
-      <li><a href="lab02/game22/game22.html">ใบงานที่ 2: game 22</a></li>
-    </ul>
+    <div class="wrap">
+
+      <header>
+        <p class="label">Computer Game Development</p>
+        <h1>งานวิชา Game Dev</h1>
+      </header>
+
+      <nav class="entries">
+        <a class="entry" href="lab01/lab01.html">
+          <span class="entry-left">
+            <span class="entry-num">Lab 01</span>
+            <span class="entry-title">แนะนำตัวเอง (2D Scene)</span>
+          </span>
+          <span class="entry-arrow">→</span>
+        </a>
+
+        <a class="entry" href="lab02/game21/game21.html">
+          <span class="entry-left">
+            <span class="entry-num">Lab 02</span>
+            <span class="entry-title">Game 21</span>
+          </span>
+          <span class="entry-arrow">→</span>
+        </a>
+
+        <a class="entry" href="lab02/game22/game22.html">
+          <span class="entry-left">
+            <span class="entry-num">Lab 02</span>
+            <span class="entry-title">Game 22</span>
+          </span>
+          <span class="entry-arrow">→</span>
+        </a>
+      </nav>
+
+      <footer>นายธนกร มีฤทธิ์ : KKU</footer>
+
+    </div>
   </body>
 </html>
